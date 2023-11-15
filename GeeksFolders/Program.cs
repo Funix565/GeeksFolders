@@ -8,6 +8,11 @@ namespace GeeksFolders
 
             // Add services to the container.
             builder.Services.AddRazorPages();
+            builder.Services.AddDbContext<GeeksFolderContext>(options =>
+            {
+                options.UseSqlServer(builder.Configuration.GetConnectionString("GeeksFolderContext")
+                    ?? throw new InvalidOperationException("Connection string 'GeeksFolderContext' not found."));
+            });
 
             var app = builder.Build();
 
