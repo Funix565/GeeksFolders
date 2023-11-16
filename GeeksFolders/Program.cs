@@ -1,4 +1,6 @@
 using GeeksFolders.Data;
+using GeeksFolders.Interfaces;
+using GeeksFolders.Repository;
 using Microsoft.EntityFrameworkCore;
 
 namespace GeeksFolders
@@ -16,6 +18,9 @@ namespace GeeksFolders
                 options.UseSqlServer(builder.Configuration.GetConnectionString("GeeksFolderContext")
                     ?? throw new InvalidOperationException("Connection string 'GeeksFolderContext' not found."));
             });
+
+            // Register Repository
+            builder.Services.AddScoped<IGeekFolderRepository, GeekFolderRepository>();
 
             var app = builder.Build();
 
