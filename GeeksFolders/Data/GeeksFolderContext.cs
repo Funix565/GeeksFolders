@@ -6,7 +6,7 @@ namespace GeeksFolders.Data
     public class GeeksFolderContext : DbContext
     {
         public GeeksFolderContext(DbContextOptions<GeeksFolderContext> options) : base(options)
-        {            
+        {
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
