@@ -1,10 +1,19 @@
-﻿@page
+﻿@page "{**path}"
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Geek Folders";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h1>"Folder" - @Model.Folder.Name</h1>
+
+@if (Model.Folder.Children != null && Model.Folder.Children.Count > 0)
+{
+    <ul>
+        @foreach (var child in Model.Folder.Children)
+        {
+            <li>
+                <a href="@Url.Page("Index", new { path = child.FullPath })">@child.Name</a>
+            </li>
+        }
+    </ul>
+}
