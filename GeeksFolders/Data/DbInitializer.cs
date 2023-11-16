@@ -13,15 +13,15 @@ namespace GeeksFolders.Data
 
             var geekFolders = new GeekFolder[]
             {
-                new GeekFolder { Name = "Creating Digital Images", ParentId = null },
-                new GeekFolder { Name = "Resources", ParentId = 1 },
-                new GeekFolder { Name = "Evidence", ParentId = 1 },
-                new GeekFolder { Name = "Graphic Products", ParentId = 1 },
-                new GeekFolder { Name = "Primary Sources", ParentId = 2 },
-                new GeekFolder { Name = "Secondary Sources", ParentId = 2 },
-                new GeekFolder { Name = "Process", ParentId = 4 },
-                new GeekFolder { Name = "Final Product", ParentId = 4 },
-
+                new GeekFolder { Name = "/", ParentId = null, FullPath = "/" },
+                new GeekFolder { Name = "Creating Digital Images", ParentId = 1, FullPath = "Creating Digital Images" },
+                new GeekFolder { Name = "Resources", ParentId = 2, FullPath = "Creating Digital Images/Resources" },
+                new GeekFolder { Name = "Evidence", ParentId = 2, FullPath = "Creating Digital Images/Evidence" },
+                new GeekFolder { Name = "Graphic Products", ParentId = 2, FullPath = "Creating Digital Images/Graphic Products" },
+                new GeekFolder { Name = "Primary Sources", ParentId = 3, FullPath = "Creating Digital Images/Resources/Primary Sources" },
+                new GeekFolder { Name = "Secondary Sources", ParentId = 3, FullPath = "Creating Digital Images/Resources/Secondary Sources" },
+                new GeekFolder { Name = "Process", ParentId = 5, FullPath = "Creating Digital Images/Graphic Products/Process" },
+                new GeekFolder { Name = "Final Product", ParentId = 5, FullPath = "Creating Digital Images/Graphic Products/Final Product" },
             };
 
             context.GeekFolders.AddRange(geekFolders);
