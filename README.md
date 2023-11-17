@@ -7,6 +7,8 @@ Create a web application that can display a hierarchical directory structure.
 
 Use ASP.NET Core
 
+ Please, rename `_appsettings_sample.json` to `appsettings.json`. And provide the connection string for `GeeksFolderContext`.
+
 Initial folder structure
 
 ![image](https://github.com/Funix565/GeeksFolders/assets/64314690/88d175a6-0953-484e-b34a-bfd7f6da02cd)
